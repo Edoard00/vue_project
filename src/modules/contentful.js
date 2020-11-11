@@ -1,9 +1,9 @@
 import { createClient } from "contentful";
 
-// eigene API token
+// Eigene API-Accsesstoken von contentful
 let contentfulClient = createClient({
-    space: '80c03r0wfd8q',
-    accessToken: 'D_yGVdTeebDfEbT-cM-TeNGDPzXp3e7ResHmbzbG9w'
+    space: 'dl5oa5cmr10s',
+    accessToken: 'OfCKawLQyhZr0qjdFySJVjCwuFM33cZC55q1nb6DCW8'
 });
 
 export default contentfulClient;
