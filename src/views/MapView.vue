@@ -12,8 +12,6 @@ import mapboxgl from "mapbox-gl"; // or "const mapboxgl = require('mapbox-gl');"
 
 export default {
   name: "MapView",
-  data: function () {},
-  components: {},
   mounted: async function () {
     // Displaying the map
     mapboxgl.accessToken = "pk.eyJ1IjoiZWQwYXJkMCIsImEiOiJja2gzZWZ3emMwOW9rMnlxeXE5dzhxOGpwIn0.mkzk2pwIF_2rKIDBu3LRVA";
