@@ -32,6 +32,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+div {
+  background-color: rgb(241, 245, 240);
+  border-radius: 20px;
+  width: 550px;
+  padding-top: 1px;
+  margin: auto;
+}
+
 img {
   width: 400px;
   border-radius: 10px;
