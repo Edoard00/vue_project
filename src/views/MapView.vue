@@ -14,7 +14,7 @@ export default {
   name: "MapView",
   mounted: async function () {
     // Displaying the map
-    mapboxgl.accessToken = "pk.eyJ1IjoiZWQwYXJkMCIsImEiOiJja2gzZWZ3emMwOW9rMnlxeXE5dzhxOGpwIn0.mkzk2pwIF_2rKIDBu3LRVA";
+    mapboxgl.accessToken = "pk.eyJ1Ijoic3RlZmFua2Fpc2VyIiwiYSI6ImNraGYwdjg5ZTAyeDgycm1jeHBiMGdwbDIifQ.YYmhF-wM7ewea-ICXEPNIg"; // AccessToken Stefan Kaiser
     new mapboxgl.Map({
       container: "mapView",
       style: "mapbox://styles/mapbox/streets-v11", // stylesheet location
