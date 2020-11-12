@@ -1,35 +1,39 @@
 <template>
   <div class="home">
-    <div v-for="commute in commutes" :key="commute.person">
-      <Commute
-        :person="commute.fields.person"
-        :start="commute.fields.start"
-        :destination="commute.fields.destination"
-      />
+    <div v-for="person in persons" :key="person.vorname">
+      <img :src="person.fields.image.fields.file.url"/>
+      <p>{{ person.fields.vorname + " " + person.fields.nachname }}</p>
+      <p>{{ person.fields.fokus }}</p>
     </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Commute from "@/components/Commute.vue";
 import contentfulClient from "@/modules/contentful.js";
 
 export default {
   name: "Home",
-  components: {
-    Commute,
-  },
+
   data: function () {
     return {
-      commutes: [],
+      persons: [],
     };
   },
   created: async function () {
     let result = await contentfulClient.getEntries({
-      content_type: "commute", // anpassen
+      content_type: "person",
     });
-    this.commutes = result.items;
+    console.log(result);
+    this.persons = result.items;
   },
 };
 </script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+img {
+  width: 400px;
+  border-radius: 10px;
+}
+</style>

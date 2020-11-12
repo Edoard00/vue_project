@@ -1,16 +1,11 @@
 <template>
-  <div class="commute">
-    <h2>{{ person.fields.firstname }} {{ person.fields.lastname }}'s commute</h2>
-    <p>This is <span class="person">{{ person.fields.firstname }}</span></p>
-
-    <img :src="person.fields.photo.fields.file.url" />
-
-    <p>{{ person.fields.firstname }} commutes from {{ start.fields.name }}</p>
-
-    <img :src="start.fields.photo.fields.file.url" />
-    
-    <p>to {{ destination.fields.name }}</p>
-    <img :src="destination.fields.photo.fields.file.url" />
+  <div>
+    <h2>{{ person.fields.vorname + " " + person.fields.nachname }}</h2>
+    <img :src="person.fields.foto.fields.file.url" />
+    <p>
+      Travels from {{ start.fields.title }} to
+      {{ destination.fields.title }}
+    </p>
   </div>
 </template>
 
@@ -26,13 +21,19 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-.person {
-  color: rgb(103, 189, 189);
-  font-weight: bold;
+<style scoped>
+div {
+  background-color: rgb(241, 245, 240);
+  border-radius: 20px;
+  width: 550px;
+  padding-top: 1px;
+  margin: auto;
 }
-
+h2 {
+  margin: 40px 0 0;
+}
 img {
-  max-width: 600px;
+  width: 400px;
+  border-radius: 10px;
 }
 </style>
