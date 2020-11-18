@@ -68,9 +68,9 @@ export default {
 
     // On every scroll event, check which element is on screen
     window.onscroll = function () {
-      var chapterNames = Object.keys(chapters);
-      for (var i = 0; i < chapterNames.length; i++) {
-        var chapterName = chapterNames[i];
+      let chapterNames = Object.keys(chapters);
+      for (let i = 0; i < chapterNames.length; i++) {
+        let chapterName = chapterNames[i];
         if (isElementOnScreen(chapterName)) {
           setActiveChapter(chapterName);
           break;
@@ -78,7 +78,7 @@ export default {
       }
     };
 
-    var activeChapterName = "baker";
+    let activeChapterName = "baker";
     function setActiveChapter(chapterName) {
       if (chapterName === activeChapterName) return;
 
@@ -91,15 +91,13 @@ export default {
     }
 
     function isElementOnScreen(id) {
-      var element = document.getElementById(id);
-      var bounds = element.getBoundingClientRect();
+      let element = document.getElementById(id);
+      let bounds = element.getBoundingClientRect();
       return bounds.top < window.innerHeight && bounds.bottom > 0;
     }
   },
 };
 </script>
-
-
 
 <style scoped lang="scss">
 @import url("https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css");
