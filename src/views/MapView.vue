@@ -1,8 +1,6 @@
 <template>
   <link
-    href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
-    rel="stylesheet"
-  />
+    href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet"/>
   <h2>Fly to a location based on scroll position</h2>
   <div id="mapView"></div>
   <div id="features">
