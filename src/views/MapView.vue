@@ -3,7 +3,7 @@
     href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
     rel="stylesheet"
   />
-  <h2>My MapBox</h2>
+  <h2>White Shirt</h2>
   <div id="mapView"></div>
 </template>
 
