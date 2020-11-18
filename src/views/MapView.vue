@@ -1,37 +1,44 @@
+// HTML ===========================
 <template>
   <link
-    href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet"/>
+    href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
+    rel="stylesheet"
+  />
   <h2>Fly to a location based on scroll position</h2>
   <div id="mapView"></div>
   <div id="features">
     <section id="baker" class="active">
       <h3>221b Baker St.</h3>
-        <p>
-            November 1895. London is shrouded in fog and Sherlock Holmes and
-            Watson pass time restlessly awaiting a new case. "The London
-            criminal is certainly a dull fellow," Sherlock bemoans. "There have
-            been numerous petty thefts," Watson offers in response. Just then a
-            telegram arrives from Sherlock's brother Mycroft with a mysterious
-            case.
-        </p>
+      <p>
+        November 1895. London is shrouded in fog and Sherlock Holmes and Watson
+        pass time restlessly awaiting a new case. "The London criminal is
+        certainly a dull fellow," Sherlock bemoans. "There have been numerous
+        petty thefts," Watson offers in response. Just then a telegram arrives
+        from Sherlock's brother Mycroft with a mysterious case.
+      </p>
     </section>
     <section id="aldgate">
       <h3>Aldgate Station</h3>
-        <p>
-            Arthur Cadogan West was found dead, head crushed in on train tracks
-            at Aldgate Station at 6AM Tuesday morning. West worked at Woolwich
-            Arsenal on the Bruce-Partington submarine, a secret military
-            project. Plans for the submarine had been stolen and seven of the
-            ten missing papers were found in West's possession. Mycroft implores
-            Sherlock to take the case and recover the three missing papers.
-        </p>
-        <small id="citation">Adapted from
-          <a href="http://www.gutenberg.org/files/2346/2346-h/2346-h.htm">Project Gutenberg</a>
-        </small>
+      <p>
+        Arthur Cadogan West was found dead, head crushed in on train tracks at
+        Aldgate Station at 6AM Tuesday morning. West worked at Woolwich Arsenal
+        on the Bruce-Partington submarine, a secret military project. Plans for
+        the submarine had been stolen and seven of the ten missing papers were
+        found in West's possession. Mycroft implores Sherlock to take the case
+        and recover the three missing papers.
+      </p>
+      <small id="citation"
+        >Adapted from
+        <a href="http://www.gutenberg.org/files/2346/2346-h/2346-h.htm"
+          >Project Gutenberg</a
+        >
+      </small>
     </section>
   </div>
 </template>
+// =================================
 
+// Javascript Code =================
 <script>
 import mapboxgl from "mapbox-gl"; // or "const mapboxgl = require('mapbox-gl');"
 
@@ -96,7 +103,9 @@ export default {
   },
 };
 </script>
+// ==================================
 
+// CSS Styling ======================
 <style scoped lang="scss">
 @import url("https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css");
 #mapView {
@@ -104,24 +113,25 @@ export default {
   width: 50%;
 }
 #features {
-width: 50%;
-margin-left: 50%;
-font-family: sans-serif;
-overflow-y: scroll;
-background-color: #fafafa;
+  width: 50%;
+  margin-left: 50%;
+  font-family: sans-serif;
+  overflow-y: scroll;
+  background-color: #fafafa;
 }
 section {
-padding: 25px 50px;
-line-height: 25px;
-border-bottom: 1px solid #ddd;
-opacity: 0.25;
-font-size: 13px;
+  padding: 25px 50px;
+  line-height: 25px;
+  border-bottom: 1px solid #ddd;
+  opacity: 0.25;
+  font-size: 13px;
 }
 section.active {
-opacity: 1;
+  opacity: 1;
 }
 section:last-child {
-border-bottom: none;
-margin-bottom: 200px;
+  border-bottom: none;
+  margin-bottom: 200px;
 }
 </style>
+// ================================
