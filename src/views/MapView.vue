@@ -5,19 +5,12 @@
     rel="stylesheet"
   />
 
-  <!-- <div class="background">
-    <div v-html="sectionsTextHtml"></div>
-    <p> {{ items.fields.text }} </p>
-  </div> -->
-
   <div class="black">
     <h2>the white</h2>
     <h1>Globetrotter</h1>
   </div>
 
-  <div class="black">
-    <p>Video T-shirt</p>
-  </div>
+  <div class="black"></div>
 
   <div class="white">
     <h2>Jeder Schweizer kauft Jährlich</h2>
@@ -55,8 +48,6 @@
     <h2>Der Transport um die halbe Erde kostet</h2>
     <h1>Pro T-shirt<br />Nur 0.10CHFr.<br /></h1>
   </div>
-
-  <div class="black"></div>
 
   <h2>Lass uns die Ganze Reise des T-Shirts anschauen</h2>
   <div id="mapView"></div>
@@ -150,15 +141,20 @@ section:last-child {
   border-bottom: none;
   margin-bottom: 200px;
 }
+section.black {
+  background-color: #000000;
+}
 .black {
   background-color: black;
-  h1, h2 {
+  h1,
+  h2 {
     color: white;
   }
 }
 .white {
   background-color: #ffffff;
-  h1, h2 {
+  h1,
+  h2 {
     color: black;
   }
 }
@@ -166,8 +162,7 @@ div {
   height: 100vw;
   margin-top: -16px;
 }
-h1,
-h2 {
+h1, h2 {
   font-weight: bold;
 }
 h1 {
@@ -189,7 +184,6 @@ export default {
   // },
   data() {
     return {
-      sectionsTextHtml: [],
       sections: [],
     };
   },
