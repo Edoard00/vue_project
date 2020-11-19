@@ -16,7 +16,7 @@
   </div>
 
   <div class="black">
-    <p>Video T-shirt</p>
+    <img src="logo.png" alt="Trulli" width="500" height="333">
   </div>
 
   <div class="white">
