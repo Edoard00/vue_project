@@ -10,55 +10,53 @@
     <p> {{ items.fields.text }} </p>
   </div> -->
 
-<section class="black">
-  <h2>the white</h2>
-  <h1>Globetrotter</h1>
-</section>
+  <div class="black">
+    <h2>the white</h2>
+    <h1>Globetrotter</h1>
+  </div>
 
-<section class="black">
-  <p>
-    Video T-shirt
-  </p>
-</section>
+  <div class="black">
+    <p>Video T-shirt</p>
+  </div>
 
-<section class="white">
-  <h2>Jeder Schweizer kauft Jährlich</h2>
-  <h1>28Kilogramm Textilien.</h1>
-</section>
+  <div class="white">
+    <h2>Jeder Schweizer kauft Jährlich</h2>
+    <h1>28Kilogramm<br />Textilien.<br /></h1>
+  </div>
 
-<section class="black">
-  <h1>500.000.000 T-Shirts</h1>
-  <h2>werden in der Schweiz Jährlich verkauft.</h2>
-  <p>Bild</p>
-</section>
+  <div class="black">
+    <h1>500.000.000<br />T-Shirts<br /></h1>
+    <h2>werden in der Schweiz Jährlich verkauft.</h2>
+    <p>Bild</p>
+  </div>
 
-<section class="white">
-  <h2>Ein T-shirt benötigt für seine Herstellung etwa</h2>
-  <h1>2700Liter Wasser.</h1>
-</section>
+  <div class="white">
+    <h2>Ein T-shirt benötigt für seine Herstellung etwa</h2>
+    <h1>2700Liter<br />Wasser.<br /></h1>
+  </div>
 
-<section class="black">
-  <h2>In Deutschland landen jährlich in Abfall</h2>
-  <h1>1.500.000 Tonnen Textil.</h1>
-</section>
+  <div class="black">
+    <h2>In Deutschland landen jährlich in Abfall</h2>
+    <h1>1.500.000<br />Tonnen Textil.<br /></h1>
+  </div>
 
-<section class="white">
-  <h1>nur 750.000 Tonnen Textil</h1>
-  <h2>werden recycelt.</h2>
-</section>
+  <div class="white">
+    <h1>Nur 750.000<br />Tonnen Textil<br /></h1>
+    <h2>werden recycelt.</h2>
+  </div>
 
-<section class="black">
-  <h2>Ein T-Shirt reist</h2>
-  <h1>27.500 Kilometer</h1>
-  <h2>bis es in die Schweiz ankommt.</h2>
-</section>
+  <div class="black">
+    <h2>Ein T-Shirt reist</h2>
+    <h1>27.500<br />Kilometer<br /></h1>
+    <h2>bis es in die Schweiz ankommt.</h2>
+  </div>
 
-<section class="white">
-  <h2>Der Transport um die halbe Erde kostet</h2>
-  <h1>pro T-shirt nur 0.10CHFr.</h1>
-</section>
+  <div class="white">
+    <h2>Der Transport um die halbe Erde kostet</h2>
+    <h1>Pro T-shirt<br />Nur 0.10CHFr.<br /></h1>
+  </div>
 
-<section class="black"></section>
+  <div class="black"></div>
 
   <h2>Lass uns die Ganze Reise des T-Shirts anschauen</h2>
   <div id="mapView"></div>
@@ -131,7 +129,6 @@
   float: left;
 }
 #features {
-  
   width: 50%;
   margin-left: 50%;
   font-family: sans-serif;
@@ -153,8 +150,28 @@ section:last-child {
   border-bottom: none;
   margin-bottom: 200px;
 }
-section.black{
-  background-color: #000000;
+.black {
+  background-color: black;
+  h1, h2 {
+    color: white;
+  }
+}
+.white {
+  background-color: #ffffff;
+  h1, h2 {
+    color: black;
+  }
+}
+div {
+  height: 100vw;
+  margin-top: -16px;
+}
+h1,
+h2 {
+  font-weight: bold;
+}
+h1 {
+  font-size: 8vw;
 }
 </style>
 // ================================
@@ -173,7 +190,7 @@ export default {
   data() {
     return {
       sectionsTextHtml: [],
-      sections: []
+      sections: [],
     };
   },
   created: async function () {
@@ -181,7 +198,7 @@ export default {
     let result = await contentfulClient.getEntries({
       content_type: "section",
     });
-    console.log("result", result)
+    console.log("result", result);
     //this.sectionsTextHtml = documentToHtmlString(this.sectionsText);
     this.sections = result.items;
     // const htmlArray = [];
