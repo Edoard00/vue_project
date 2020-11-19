@@ -143,7 +143,7 @@ section {
   border-bottom: 1px solid #ddd;
   opacity: 0.25;
   font-size: 13px;
-  p{
+  h3, p{
     color: white;
   }
 }
