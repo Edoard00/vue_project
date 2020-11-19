@@ -80,15 +80,16 @@
 #mapView {
   height: 100vh;
   width: 50%;
+  float: left;
 }
 #features {
-  margin-top: -578px;
+  
   width: 50%;
   margin-left: 50%;
   font-family: sans-serif;
   color: black;
   overflow-y: scroll;
-  background-color: #000000
+  background-color: #000000;
 }
 section {
   padding: 25px 50px;
