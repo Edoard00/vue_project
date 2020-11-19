@@ -176,7 +176,7 @@ h2 {
 
 }
 h1 {
-  font-size: 16vw;
+  font-size: 12vw;
   text-align: left;
   line-height: 80%;
   text-transform: uppercase;
