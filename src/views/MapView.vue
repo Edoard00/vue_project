@@ -27,7 +27,7 @@
   <div class="black">
     <h1>50.000.000<br />T-Shirts<br /></h1>
     <h2>werden in der Schweiz jährlich verkauft.</h2>
-    <p>Bild</p>
+    <img src="logo.png" width="500" height="333" />
   </div>
 
   <div class="white">
@@ -143,7 +143,8 @@ section {
   border-bottom: 1px solid #ddd;
   opacity: 0.25;
   font-size: 13px;
-  h3, p{
+  h3,
+  p {
     color: white;
   }
 }
@@ -156,24 +157,25 @@ section:last-child {
 }
 .black {
   background-color: black;
-  h1, h2 {
+  h1,
+  h2 {
     color: white;
   }
 }
 .white {
   background-color: #ffffff;
-  h1, h2 {
+  h1,
+  h2 {
     color: black;
   }
 }
 div {
-  height: 90vw;
+  height: 100vh;
   margin-top: -16px;
 }
 h1,
 h2 {
   font-weight: bold;
-
 }
 h1 {
   font-size: 16vw;
@@ -184,11 +186,7 @@ h1 {
 h2 {
   font-size: 4vw;
   text-align: left;
-
-
 }
-
-
 </style>
 // ================================
 
