@@ -26,7 +26,7 @@ export default {
     });
     //console.log(result);
     this.persons = result.items;
-  },
+  }
 };
 </script>
 

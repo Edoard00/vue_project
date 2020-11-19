@@ -4,46 +4,137 @@
     href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
     rel="stylesheet"
   />
-  <h2>Fly to a location based on scroll position</h2>
+
+  <div class="pages">
+    <div v-for="(items, index) in sections" :key="index">
+      <section v-html="items" style="background-color:{{ items.fields.colorHex }};"></section>
+      <p>{{ items.fields.text }}</p>
+    </div>
+  </div>
+
+  <h2>Lass uns die Ganze Reise des T-Shirts anschauen</h2>
   <div id="mapView"></div>
   <div id="features">
     <section id="baker" class="active">
-      <h3>221b Baker St.</h3>
+      <h3>USA, Virginia</h3>
       <p>
-        November 1895. London is shrouded in fog and Sherlock Holmes and Watson
-        pass time restlessly awaiting a new case. "The London criminal is
-        certainly a dull fellow," Sherlock bemoans. "There have been numerous
-        petty thefts," Watson offers in response. Just then a telegram arrives
-        from Sherlock's brother Mycroft with a mysterious case.
+        Ein gewöhnliches T-Shirt hat seinen Ursprung in den USA. In Virginia
+        befinden sich riesige Baumwollplantagen.
       </p>
     </section>
-    <section id="aldgate">
-      <h3>Aldgate Station</h3>
+    <section id="california">
+      <h3>USA, Kalifornien</h3>
       <p>
-        Arthur Cadogan West was found dead, head crushed in on train tracks at
-        Aldgate Station at 6AM Tuesday morning. West worked at Woolwich Arsenal
-        on the Bruce-Partington submarine, a secret military project. Plans for
-        the submarine had been stolen and seven of the ten missing papers were
-        found in West's possession. Mycroft implores Sherlock to take the case
-        and recover the three missing papers.
+        Wurde die Baumwolle geerntet und gereinigt, wird sie einmal durch die
+        USA nach Kalifornien transportiert, wo sie dann auf Containerschiffe
+        verladen wird.
       </p>
-      <small id="citation"
-        >Adapted from
-        <a href="http://www.gutenberg.org/files/2346/2346-h/2346-h.htm"
-          >Project Gutenberg</a
-        >
-      </small>
+    </section>
+    <section id="turkey">
+      <h3>Türkei</h3>
+      <p>
+        Das Containerschiff fährt etwa 10.000 km in die Türkei, wo die Baumwolle
+        dann zum Faden gesponnen wird. Dort entsteht das Garn.
+      </p>
+    </section>
+    <section id="taiwan">
+      <h3>Taiwan</h3>
+      <p>
+        Von der Türkei geht’sin das 8.000 km entfernte Taiwan. Dort wird mit
+        Hilfe von Strickmaschinen aus dem Garn Stoff produziert, das wiederum
+        als Stoffballen auf ein Containerschiff verladen werden.
+      </p>
+    </section>
+    <section id="china">
+      <h3>China</h3>
+      <p>
+        Nach 2.000 km erreicht das Schiff China. In den chinesischen
+        Textilfabriken werden unter fragwürdigen Arbeitsbedingungen und
+        geringsten Löhnen die Stoffe, zu beispielsweise einemT-Shirt,
+        verarbeitet. Der Stoff wird gewebt und eingefärbt. In China ist die
+        Verarbeitung besonders günstig, da zum einen wenig Rücksicht auf die
+        Umwelt genommen wird, zum anderen die Lohnkosten sehr gering sind. So
+        landen die eingesetzten Chemikalien zum Färbenungefiltert in den Flüssen
+        und Verschmutzen diese, sowie das Grundwasser.
+      </p>
+    </section>
+    <section id="germany">
+      <h3>Deutschland</h3>
+      <p>
+        Ist das T-Shirt fertig genäht, wird es wieder auf ein Containerschiff
+        gebracht und 7.000 km nach Deutschland gefahren.Das T-Shirt hat nun
+        schon eine Reise von 27.500 km hinter sich, bis es in Deutschland
+        ankommt. Mit Lastwagen landet es in unseren Kaufhäusern. Hier verbleibt
+        auch der Großteil des bezahlten Preises. Über die Hälfte der Einnahmen
+        gehen nämlich an den Einzelhändler und die Marke. Die Näherinen dagegen
+        bekommen lediglich unter 1% des im Laden bezahlten Preises.
+      </p>
     </section>
   </div>
 </template>
 // =================================
 
+// CSS Styling ======================
+<style scoped lang="scss">
+@import url("https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css");
+#mapView {
+  height: 100vh;
+  width: 50%;
+}
+#features {
+  margin-top: -578px;
+  width: 50%;
+  margin-left: 50%;
+  font-family: sans-serif;
+  overflow-y: scroll;
+  background-color: #fafafa;
+}
+section {
+  padding: 25px 50px;
+  line-height: 25px;
+  border-bottom: 1px solid #ddd;
+  opacity: 0.25;
+  font-size: 13px;
+}
+section.active {
+  opacity: 1;
+}
+section:last-child {
+  border-bottom: none;
+  margin-bottom: 200px;
+}
+</style>
+// ================================
+
 // Javascript Code =================
 <script>
 import mapboxgl from "mapbox-gl"; // or "const mapboxgl = require('mapbox-gl');"
+import contentfulClient from "@/modules/contentful.js";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
   name: "MapView",
+
+  data: function () {
+    return {
+      sectionsHTML: [],
+    };
+  },
+
+  created: async function () {
+    // Take data from Contentful
+    let result = await contentfulClient.getEntries({
+      content_type: "section",
+    });
+    console.log("result", result);
+    this.sections = documentToHtmlString(result.items.fields.text);
+    // const htmlArray = [];
+    // result.items.forEach((item) => {
+    //   htmlArray.push(documentToHtmlString(item.fields.text));
+    // });
+    // this.sectionsHTML = htmlArray;
+  },
+
   mounted: async function () {
     // Displaying the map
     mapboxgl.accessToken =
@@ -58,15 +149,43 @@ export default {
     var chapters = {
       baker: {
         bearing: 27,
-        center: [-0.15591514, 51.51830379],
-        zoom: 15.5,
+        center: [-78.024902, 37.926868],
+        zoom: 6,
         pitch: 20,
       },
-      aldgate: {
+      california: {
         duration: 6000,
-        center: [-0.07571203, 51.51424049],
+        center: [-119.417931, 36.778259],
         bearing: 150,
-        zoom: 15,
+        zoom: 6,
+        pitch: 0,
+      },
+      turkey: {
+        duration: 6000,
+        center: [35.6667, 39.1667],
+        bearing: 150,
+        zoom: 6,
+        pitch: 0,
+      },
+      taiwan: {
+        duration: 6000,
+        center: [121.957366, 25.105497],
+        bearing: 150,
+        zoom: 6,
+        pitch: 0,
+      },
+      china: {
+        duration: 6000,
+        center: [103.0, 35.0],
+        bearing: 150,
+        zoom: 6,
+        pitch: 0,
+      },
+      germany: {
+        duration: 600,
+        center: [9.7973417, 50.9688842],
+        bearing: 150,
+        zoom: 6,
         pitch: 0,
       },
     };
@@ -104,34 +223,3 @@ export default {
 };
 </script>
 // ==================================
-
-// CSS Styling ======================
-<style scoped lang="scss">
-@import url("https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css");
-#mapView {
-  height: 100vh;
-  width: 50%;
-}
-#features {
-  width: 50%;
-  margin-left: 50%;
-  font-family: sans-serif;
-  overflow-y: scroll;
-  background-color: #fafafa;
-}
-section {
-  padding: 25px 50px;
-  line-height: 25px;
-  border-bottom: 1px solid #ddd;
-  opacity: 0.25;
-  font-size: 13px;
-}
-section.active {
-  opacity: 1;
-}
-section:last-child {
-  border-bottom: none;
-  margin-bottom: 200px;
-}
-</style>
-// ================================
