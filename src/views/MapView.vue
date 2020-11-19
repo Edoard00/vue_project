@@ -176,15 +176,15 @@ h2 {
 
 }
 h1 {
-  font-size: 16vw;
+  font-size: 12vw;
+  font-weight: bold;
   text-align: left;
   line-height: 80%;
   text-transform: uppercase;
 }
 h2 {
   font-size: 4vw;
-  text-align: left;
-
+  text-align: center;
 
 }
 
