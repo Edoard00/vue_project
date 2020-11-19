@@ -10,17 +10,55 @@
     <p> {{ items.fields.text }} </p>
   </div> -->
 
-<section class="white">
-  <p>
-
-  </p>
+<section class="black">
+  <h2>the white</h2>
+  <h1>Globetrotter</h1>
 </section>
 
 <section class="black">
   <p>
-
+    Video T-shirt
   </p>
 </section>
+
+<section class="white">
+  <h2>Jeder Schweizer kauft Jährlich</h2>
+  <h1>28Kilogramm Textilien.</h1>
+</section>
+
+<section class="black">
+  <h1>500.000.000 T-Shirts</h1>
+  <h2>werden in der Schweiz Jährlich verkauft.</h2>
+  <p>Bild</p>
+</section>
+
+<section class="white">
+  <h2>Ein T-shirt benötigt für seine Herstellung etwa</h2>
+  <h1>2700Liter Wasser.</h1>
+</section>
+
+<section class="black">
+  <h2>In Deutschland landen jährlich in Abfall</h2>
+  <h1>1.500.000 Tonnen Textil.</h1>
+</section>
+
+<section class="white">
+  <h1>nur 750.000 Tonnen Textil</h1>
+  <h2>werden recycelt.</h2>
+</section>
+
+<section class="black">
+  <h2>Ein T-Shirt reist</h2>
+  <h1>27.500 Kilometer</h1>
+  <h2>bis es in die Schweiz ankommt.</h2>
+</section>
+
+<section class="white">
+  <h2>Der Transport um die halbe Erde kostet</h2>
+  <h1>pro T-shirt nur 0.10CHFr.</h1>
+</section>
+
+<section class="black"></section>
 
   <h2>Lass uns die Ganze Reise des T-Shirts anschauen</h2>
   <div id="mapView"></div>
