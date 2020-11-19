@@ -5,12 +5,22 @@
     rel="stylesheet"
   />
 
-  <div class="pages">
-    <div v-for="(items, index) in sections" :key="index">
-      <section v-html="items" style="background-color:{{ items.fields.colorHex }};"></section>
-      <p>{{ items.fields.text }}</p>
-    </div>
-  </div>
+  <!-- <div class="background">
+    <div v-html="sectionsTextHtml"></div>
+    <p> {{ items.fields.text }} </p>
+  </div> -->
+
+<section class="white">
+  <p>
+
+  </p>
+</section>
+
+<section class="black">
+  <p>
+
+  </p>
+</section>
 
   <h2>Lass uns die Ganze Reise des T-Shirts anschauen</h2>
   <div id="mapView"></div>
@@ -103,6 +113,9 @@ section:last-child {
   border-bottom: none;
   margin-bottom: 200px;
 }
+section.black{
+  background-color: #000000;
+}
 </style>
 // ================================
 
@@ -110,24 +123,27 @@ section:last-child {
 <script>
 import mapboxgl from "mapbox-gl"; // or "const mapboxgl = require('mapbox-gl');"
 import contentfulClient from "@/modules/contentful.js";
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+//import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
   name: "MapView",
-
-  data: function () {
+  // props: {
+  //   sectionsText: String,
+  // },
+  data() {
     return {
-      sectionsHTML: [],
+      sectionsTextHtml: [],
+      sections: []
     };
   },
-
   created: async function () {
     // Take data from Contentful
     let result = await contentfulClient.getEntries({
       content_type: "section",
     });
-    console.log("result", result);
-    this.sections = documentToHtmlString(result.items.fields.text);
+    console.log("result", result)
+    //this.sectionsTextHtml = documentToHtmlString(this.sectionsText);
+    this.sections = result.items;
     // const htmlArray = [];
     // result.items.forEach((item) => {
     //   htmlArray.push(documentToHtmlString(item.fields.text));

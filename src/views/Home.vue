@@ -24,7 +24,7 @@ export default {
     let result = await contentfulClient.getEntries({
       content_type: "person",
     });
-    //console.log(result);
+    console.log(result);
     this.persons = result.items;
   }
 };
