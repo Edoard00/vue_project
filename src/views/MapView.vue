@@ -86,8 +86,9 @@
   width: 50%;
   margin-left: 50%;
   font-family: sans-serif;
+  color: black;
   overflow-y: scroll;
-  background-color: #fafafa;
+  background-color: #000000
 }
 section {
   padding: 25px 50px;
