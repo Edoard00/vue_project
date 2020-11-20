@@ -5,11 +5,6 @@
     rel="stylesheet"
   />
 
-  <!-- <div class="background">
-    <div v-html="sectionsTextHtml"></div>
-    <p> {{ items.fields.text }} </p>
-  </div> -->
-
   <div class="black">
     <h2>The white</h2>
     <h1>Globetrotter</h1>
@@ -222,16 +217,11 @@ h2 {
 <script>
 import mapboxgl from "mapbox-gl"; // or "const mapboxgl = require('mapbox-gl');"
 import contentfulClient from "@/modules/contentful.js";
-//import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
   name: "MapView",
-  // props: {
-  //   sectionsText: String,
-  // },
   data() {
     return {
-      sectionsTextHtml: [],
       sections: [],
     };
   },
@@ -241,13 +231,7 @@ export default {
       content_type: "section",
     });
     console.log("result", result);
-    //this.sectionsTextHtml = documentToHtmlString(this.sectionsText);
     this.sections = result.items;
-    // const htmlArray = [];
-    // result.items.forEach((item) => {
-    //   htmlArray.push(documentToHtmlString(item.fields.text));
-    // });
-    // this.sectionsHTML = htmlArray;
   },
 
   mounted: async function () {
