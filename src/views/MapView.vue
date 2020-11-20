@@ -15,7 +15,6 @@
     <h1>Globetrotter</h1>
   </div>
 
-<<<<<<< HEAD
   <div>
     <iframe
       src="https://player.vimeo.com/video/481608125"
@@ -25,10 +24,6 @@
       allow="autoplay; fullscreen"
       allowfullscreen
     ></iframe>
-=======
-  <div class="black">
-    <p>Video T-shirt</p>
->>>>>>> 633df6fb5d14f4daf5f902292c7e85ad294aa68c
   </div>
 
   <div class="white">
@@ -51,7 +46,6 @@
     <h2>In der Schweiz landen jährlich</h2>
     <h1>1.000.000<br />Tonnen Textil.<br /></h1>
     <h2>im Abfall</h2>
-<<<<<<< HEAD
     <iframe
       src="https://player.vimeo.com/video/481608225"
       width="440"
@@ -60,14 +54,11 @@
       allow="autoplay; fullscreen"
       allowfullscreen
     ></iframe>
-=======
->>>>>>> 633df6fb5d14f4daf5f902292c7e85ad294aa68c
   </div>
 
   <div class="white">
     <h1>Nur 500.000<br />Tonnen Textil<br /></h1>
     <h2>werden recycelt.</h2>
-<<<<<<< HEAD
     <iframe
       src="https://player.vimeo.com/video/481608297"
       width="440"
@@ -76,8 +67,6 @@
       allow="autoplay; fullscreen"
       allowfullscreen
     ></iframe>
-=======
->>>>>>> 633df6fb5d14f4daf5f902292c7e85ad294aa68c
   </div>
 
   <div class="black">
