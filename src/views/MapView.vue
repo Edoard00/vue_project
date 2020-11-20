@@ -34,7 +34,6 @@
   <div class="black">
     <h1>50.000.000<br />T-Shirts<br /></h1>
     <h2>werden in der Schweiz jährlich verkauft.</h2>
-    <p>Bild</p>
   </div>
 
   <div class="white">
