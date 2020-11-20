@@ -70,7 +70,7 @@
   <h2>Lass uns die ganze Reise des T-Shirts anschauen</h2>
   <div id="mapView"></div>
   <div id="features">
-    <section id="baker" class="active">
+    <section id="virginia" class="active">
       <h3>USA, Virginia</h3>
       <p>
         Ein gewöhnliches T-Shirt hat seinen Ursprung in den USA. In Virginia
@@ -126,6 +126,7 @@
       </p>
     </section>
   </div>
+  <section class="space"></section>
 </template>
 // =================================
 
@@ -195,6 +196,9 @@ h2 {
   font-size: 4vw;
   text-align: left;
 }
+.space{
+  padding: 400px;
+}
 </style>
 // ================================
 
@@ -242,7 +246,7 @@ export default {
     });
 
     var chapters = {
-      baker: {
+      virginia: {
         bearing: 27,
         center: [-78.024902, 37.926868],
         zoom: 6,
@@ -297,7 +301,7 @@ export default {
       }
     };
 
-    let activeChapterName = "baker";
+    let activeChapterName = "virginia";
     function setActiveChapter(chapterName) {
       if (chapterName === activeChapterName) return;
 
