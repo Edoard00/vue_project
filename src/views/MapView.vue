@@ -15,6 +15,7 @@
     <h1>Globetrotter</h1>
   </div>
 
+<<<<<<< HEAD
   <div>
     <iframe
       src="https://player.vimeo.com/video/481608125"
@@ -24,17 +25,21 @@
       allow="autoplay; fullscreen"
       allowfullscreen
     ></iframe>
+=======
+  <div class="black">
+    <p>Video T-shirt</p>
+>>>>>>> 633df6fb5d14f4daf5f902292c7e85ad294aa68c
   </div>
 
   <div class="white">
     <h2>Jeder Schweizer, jede Schweizerin kauft jährlich</h2>
     <h1>28Kilogramm<br />Textilien.<br /></h1>
-    <img src="../assets/clothes.jpg" alt="icon" width="500" height="333" />
   </div>
 
   <div class="black">
     <h1>50.000.000<br />T-Shirts<br /></h1>
     <h2>werden in der Schweiz jährlich verkauft.</h2>
+    <p>Bild</p>
   </div>
 
   <div class="white">
@@ -44,8 +49,9 @@
 
   <div class="black">
     <h2>In der Schweiz landen jährlich</h2>
-    <h1>1.500.000<br />Tonnen Textil.<br /></h1>
+    <h1>1.000.000<br />Tonnen Textil.<br /></h1>
     <h2>im Abfall</h2>
+<<<<<<< HEAD
     <iframe
       src="https://player.vimeo.com/video/481608225"
       width="440"
@@ -54,11 +60,14 @@
       allow="autoplay; fullscreen"
       allowfullscreen
     ></iframe>
+=======
+>>>>>>> 633df6fb5d14f4daf5f902292c7e85ad294aa68c
   </div>
 
   <div class="white">
     <h1>Nur 500.000<br />Tonnen Textil<br /></h1>
     <h2>werden recycelt.</h2>
+<<<<<<< HEAD
     <iframe
       src="https://player.vimeo.com/video/481608297"
       width="440"
@@ -67,6 +76,8 @@
       allow="autoplay; fullscreen"
       allowfullscreen
     ></iframe>
+=======
+>>>>>>> 633df6fb5d14f4daf5f902292c7e85ad294aa68c
   </div>
 
   <div class="black">
@@ -167,8 +178,7 @@ section {
   border-bottom: 1px solid #ddd;
   opacity: 0.25;
   font-size: 13px;
-  h3,
-  p {
+  h3, p{
     color: white;
   }
 }
@@ -181,25 +191,24 @@ section:last-child {
 }
 .black {
   background-color: black;
-  h1,
-  h2 {
+  h1, h2 {
     color: white;
   }
 }
 .white {
   background-color: #ffffff;
-  h1,
-  h2 {
+  h1, h2 {
     color: black;
   }
 }
 div {
-  height: 100vh;
+  height: 90vw;
   margin-top: -16px;
 }
 h1,
 h2 {
   font-weight: bold;
+
 }
 h1 {
   font-size: 12vw;
@@ -210,10 +219,17 @@ h1 {
 h2 {
   font-size: 4vw;
   text-align: left;
+
+
 }
+<<<<<<< HEAD
 .space {
   padding: 400px;
 }
+=======
+
+
+>>>>>>> 633df6fb5d14f4daf5f902292c7e85ad294aa68c
 </style>
 // ================================
 
