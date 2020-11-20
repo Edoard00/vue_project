@@ -167,15 +167,12 @@ section:last-child {
   }
 }
 div {
-  height: 50vw;
-  padding-top: 0.5vw;
-  padding-bottom: 12vw;
+  height: 90vw;
+  margin-top: -16px;
 }
 h1,
 h2 {
   font-weight: bold;
-  margin: 0;
-  padding: 0;
 
 }
 h1 {
