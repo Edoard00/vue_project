@@ -18,6 +18,7 @@
       frameborder="0"
       allow="autoplay; fullscreen"
       allowfullscreen
+      loop="1"
     ></iframe>
   </div>
 
