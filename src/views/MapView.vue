@@ -23,13 +23,13 @@
   </div>
 
   <div class="white">
-    <h2>Jeder Schweizer, jede Schweizerin kauft jährlich</h2>
+    <h2>Jeder Deutsche, jede deutsche kauft jährlich</h2>
     <h1>28Kilogramm<br />Textilien.<br /></h1>
   </div>
 
   <div class="black">
     <h1>50.000.000<br />T-Shirts<br /></h1>
-    <h2>werden in der Schweiz jährlich verkauft.</h2>
+    <h2>werden in Deutschland jährlich verkauft.</h2>
   </div>
 
   <div class="white">
@@ -38,7 +38,7 @@
   </div>
 
   <div class="black">
-    <h2>In der Schweiz landen jährlich</h2>
+    <h2>In Deutschland landen jährlich</h2>
     <h1>1.000.000<br />Tonnen Textil.<br /></h1>
     <h2>im Abfall</h2>
     <iframe
@@ -67,15 +67,13 @@
   <div class="black">
     <h2>Ein T-Shirt reist</h2>
     <h1>27.500<br />Kilometer<br /></h1>
-    <h2>bis es in der Schweiz ankommt.</h2>
+    <h2>bis es in Deutschland ankommt.</h2>
   </div>
 
   <div class="white">
     <h2>Der Transport um die halbe Erde kostet</h2>
     <h1>pro T-shirt nur 10 Rappen</h1>
   </div>
-
-  <div class="black"></div>
 
   <h2>Lass uns die ganze Reise des T-Shirts anschauen</h2>
   <div id="mapView"></div>
