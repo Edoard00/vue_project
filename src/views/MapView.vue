@@ -16,9 +16,14 @@
   </div>
 
   <div>
-    <video id="video" width="320" height="240" controls>
-      <source src="https://drive.google.com/file/d/1gU8to0geAxGzjaDqKtz7hEs6gnsqbMGM/view?usp=sharing" type="video/mp4"/>
-    </video>
+    <iframe
+      src="https://player.vimeo.com/video/481608125"
+      width="300"
+      height="300"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+    ></iframe>
   </div>
 
   <div class="white">
@@ -41,17 +46,27 @@
     <h2>In der Schweiz landen jährlich</h2>
     <h1>1.500.000<br />Tonnen Textil.<br /></h1>
     <h2>im Abfall</h2>
-    <video id="video" width="320" height="240" controls>
-      <source src="https://drive.google.com/file/d/140Lz4gUI1oN4eWIYaKxUx6YruJ1KYuor/view?usp=sharing" type="video/mp4"/>
-    </video>
+    <iframe
+      src="https://player.vimeo.com/video/481608225"
+      width="440"
+      height="260"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+    ></iframe>
   </div>
 
   <div class="white">
     <h1>Nur 500.000<br />Tonnen Textil<br /></h1>
     <h2>werden recycelt.</h2>
-    <video id="video" width="320" height="240" controls>
-      <source src="https://drive.google.com/file/d/1opC9uCHoeoCH7dQ8dzfftjXMVkPsFFWT/view?usp=sharing" type="video/mp4"/>
-    </video>
+    <iframe
+      src="https://player.vimeo.com/video/481608297"
+      width="440"
+      height="260"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+    ></iframe>
   </div>
 
   <div class="black">
@@ -196,7 +211,7 @@ h2 {
   font-size: 4vw;
   text-align: left;
 }
-.space{
+.space {
   padding: 400px;
 }
 </style>
