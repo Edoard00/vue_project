@@ -190,7 +190,7 @@ section:last-child {
   }
 }
 div {
-  height: 90vw;
+  height: 100vh;
   margin-top: -16px;
 }
 h1,
