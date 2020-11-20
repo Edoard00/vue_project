@@ -10,11 +10,11 @@
     <h1>Globetrotter</h1>
   </div>
 
-  <div class="intro">
+  <div>
     <iframe
       src="https://player.vimeo.com/video/481608125"
-      width="90%"
-      height="90%"
+      width="300"
+      height="300"
       frameborder="0"
       allow="autoplay; fullscreen"
       allowfullscreen
@@ -80,7 +80,7 @@
   <h2>Lass uns die ganze Reise des T-Shirts anschauen</h2>
   <div id="mapView"></div>
   <div id="features">
-    <section id="virginia" class="active">
+    <section id="baker" class="active">
       <h3>USA, Virginia</h3>
       <p>
         Ein gewöhnliches T-Shirt hat seinen Ursprung in den USA. In Virginia
@@ -184,11 +184,9 @@ section:last-child {
   h1, h2 {
     color: black;
   }
-  }
-.intro {background-color: black
 }
 div {
-  height: 90vw;
+  height: 100vh;
   margin-top: -16px;
 }
 h1,
@@ -247,7 +245,7 @@ export default {
     });
 
     var chapters = {
-      virginia: {
+      baker: {
         bearing: 27,
         center: [-78.024902, 37.926868],
         zoom: 6,
@@ -302,7 +300,7 @@ export default {
       }
     };
 
-    let activeChapterName = "virginia";
+    let activeChapterName = "baker";
     function setActiveChapter(chapterName) {
       if (chapterName === activeChapterName) return;
 
