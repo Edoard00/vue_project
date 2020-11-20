@@ -15,19 +15,21 @@
     <h1>Globetrotter</h1>
   </div>
 
-  <div class="black">
-    <img src="logo.png" alt="Trulli" width="500" height="333">
+  <div>
+    <video id="video" width="320" height="240" controls>
+      <source src="https://drive.google.com/file/d/1gU8to0geAxGzjaDqKtz7hEs6gnsqbMGM/view?usp=sharing" type="video/mp4"/>
+    </video>
   </div>
 
   <div class="white">
     <h2>Jeder Schweizer, jede Schweizerin kauft jährlich</h2>
     <h1>28Kilogramm<br />Textilien.<br /></h1>
+    <img src="../assets/clothes.jpg" alt="icon" width="500" height="333" />
   </div>
 
   <div class="black">
     <h1>50.000.000<br />T-Shirts<br /></h1>
     <h2>werden in der Schweiz jährlich verkauft.</h2>
-    <p>Bild</p>
   </div>
 
   <div class="white">
@@ -37,13 +39,19 @@
 
   <div class="black">
     <h2>In der Schweiz landen jährlich</h2>
-    <h1>1.000.000<br />Tonnen Textil.<br /></h1>
+    <h1>1.500.000<br />Tonnen Textil.<br /></h1>
     <h2>im Abfall</h2>
+    <video id="video" width="320" height="240" controls>
+      <source src="https://drive.google.com/file/d/140Lz4gUI1oN4eWIYaKxUx6YruJ1KYuor/view?usp=sharing" type="video/mp4"/>
+    </video>
   </div>
 
   <div class="white">
     <h1>Nur 500.000<br />Tonnen Textil<br /></h1>
     <h2>werden recycelt.</h2>
+    <video id="video" width="320" height="240" controls>
+      <source src="https://drive.google.com/file/d/1opC9uCHoeoCH7dQ8dzfftjXMVkPsFFWT/view?usp=sharing" type="video/mp4"/>
+    </video>
   </div>
 
   <div class="black">
@@ -143,7 +151,8 @@ section {
   border-bottom: 1px solid #ddd;
   opacity: 0.25;
   font-size: 13px;
-  h3, p{
+  h3,
+  p {
     color: white;
   }
 }
@@ -156,13 +165,15 @@ section:last-child {
 }
 .black {
   background-color: black;
-  h1, h2 {
+  h1,
+  h2 {
     color: white;
   }
 }
 .white {
   background-color: #ffffff;
-  h1, h2 {
+  h1,
+  h2 {
     color: black;
   }
 }
@@ -173,7 +184,6 @@ div {
 h1,
 h2 {
   font-weight: bold;
-
 }
 h1 {
   font-size: 12vw;
@@ -184,11 +194,7 @@ h1 {
 h2 {
   font-size: 4vw;
   text-align: left;
-
-
 }
-
-
 </style>
 // ================================
 
