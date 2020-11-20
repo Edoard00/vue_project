@@ -10,11 +10,11 @@
     <h1>Globetrotter</h1>
   </div>
 
-  <div class="intro">
+  <div>
     <iframe
       src="https://player.vimeo.com/video/481608125"
-      width="90%"
-      height="90%"
+      width="300"
+      height="300"
       frameborder="0"
       allow="autoplay; fullscreen"
       allowfullscreen
@@ -181,8 +181,6 @@ section:last-child {
   h1, h2 {
     color: black;
   }
-  }
-.intro {background-color: black
 }
 div {
   height: 100vh;
